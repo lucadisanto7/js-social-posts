@@ -103,9 +103,15 @@ document.addEventListener('click', function(event) {
         const postId = likeButton.getAttribute('data-postid');
         const likeCounter = document.getElementById(`like-counter-${postId}`);
         let likes = parseInt(likeCounter.textContent);
-        
+
         if (!likedPosts.includes(postId)) {
             likes++;
             likedPosts.push(postId);
             likeButton.classList.add('like-button--liked');
+        } else {
+            likes--;
+            const index = likedPosts.indexOf(postId);
+            likedPosts.splice(index, 1);
+            likeButton.classList.remove('like-button--liked');
+        }
 });
