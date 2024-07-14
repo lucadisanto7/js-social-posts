@@ -96,4 +96,6 @@ posts.forEach(post => {
 
 // Milestone 2
 const likedPosts = [];
+document.addEventListener('click', function(event) {
 
+});
