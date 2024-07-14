@@ -103,4 +103,9 @@ document.addEventListener('click', function(event) {
         const postId = likeButton.getAttribute('data-postid');
         const likeCounter = document.getElementById(`like-counter-${postId}`);
         let likes = parseInt(likeCounter.textContent);
+        
+        if (!likedPosts.includes(postId)) {
+            likes++;
+            likedPosts.push(postId);
+            likeButton.classList.add('like-button--liked');
 });
