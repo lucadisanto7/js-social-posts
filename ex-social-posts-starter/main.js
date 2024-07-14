@@ -93,3 +93,7 @@ posts.forEach(post => {
     `;
     container.appendChild(postElement);
 });
+
+// Milestone 2
+const likedPosts = [];
+
