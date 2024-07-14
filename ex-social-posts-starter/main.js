@@ -98,4 +98,9 @@ posts.forEach(post => {
 const likedPosts = [];
 document.addEventListener('click', function(event) {
     const target = event.target;
+    if (target.classList.contains('js-like-button') || target.parentNode.classList.contains('js-like-button')) {
+        const likeButton = target.classList.contains('js-like-button') ? target : target.parentNode;
+        const postId = likeButton.getAttribute('data-postid');
+        const likeCounter = document.getElementById(`like-counter-${postId}`);
+        let likes = parseInt(likeCounter.textContent);
 });
