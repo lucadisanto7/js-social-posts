@@ -114,4 +114,6 @@ document.addEventListener('click', function(event) {
             likedPosts.splice(index, 1);
             likeButton.classList.remove('like-button--liked');
         }
+        likeCounter.textContent = likes;
+    }
 });
